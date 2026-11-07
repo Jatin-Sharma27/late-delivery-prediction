@@ -1,0 +1,106 @@
+{
+  "split": {
+    "train": 53377,
+    "val": 18117,
+    "test": 18603,
+    "final_train": 71494,
+    "late_rate_train": 0.0507147273170092,
+    "late_rate_val": 0.08765248109510404,
+    "late_rate_test": 0.03612320593452669,
+    "test_late_orders": 672
+  },
+  "best_xgb": {
+    "params": {
+      "max_depth": 3,
+      "learning_rate": 0.03,
+      "min_child_weight": 10,
+      "subsample": 0.8
+    },
+    "n_estimators": 64,
+    "val_pr_auc": 0.16465444358025982
+  },
+  "validation": {
+    "logistic_regression": {
+      "pr_auc": 0.2095432994136783,
+      "roc_auc": 0.7100103657216164,
+      "precision_top10pct": 0.2545554942020983,
+      "recall_top10pct": 0.2903022670025189,
+      "brier": 0.07728674225413953
+    },
+    "xgboost": {
+      "pr_auc": 0.16465444358025982,
+      "roc_auc": 0.674721842215186,
+      "precision_top10pct": 0.1921590281612369,
+      "recall_top10pct": 0.21914357682619648,
+      "brier": 0.07917396891576216
+    }
+  },
+  "test": {
+    "constant_baseline": {
+      "pr_auc": 0.03612320593452669,
+      "roc_auc": 0.5,
+      "precision_top10pct": 0.03612320593452669,
+      "recall_top10pct": 0.1,
+      "brier": 0.03539200699291935
+    },
+    "slack_rule": {
+      "pr_auc": 0.12376375667599561,
+      "roc_auc": 0.7741766304564321,
+      "precision_top10pct": 0.13870967741935483,
+      "recall_top10pct": 0.38392857142857145
+    },
+    "logistic_regression": {
+      "pr_auc": 0.07290645647417855,
+      "roc_auc": 0.709473783099766,
+      "precision_top10pct": 0.07795698924731183,
+      "recall_top10pct": 0.21577380952380953,
+      "brier": 0.060202640532363655
+    },
+    "xgboost": {
+      "pr_auc": 0.03485511330897161,
+      "roc_auc": 0.4967523904464469,
+      "precision_top10pct": 0.02903225806451613,
+      "recall_top10pct": 0.08035714285714286,
+      "brier": 0.0421738462171748
+    }
+  },
+  "ci95_pr_auc_diff": {
+    "xgboost_minus_logreg": [
+      -0.04818676793108006,
+      -0.03116071146633237
+    ],
+    "xgboost_minus_rule": [
+      -0.10695925499606312,
+      -0.07445771836869167
+    ]
+  },
+  "test_by_month": {
+    "2018-06": {
+      "orders": 6096,
+      "late_rate": 0.011646981627296589,
+      "xgb_pr_auc": 0.029921772841718593
+    },
+    "2018-07": {
+      "orders": 6156,
+      "late_rate": 0.03378817413905133,
+      "xgb_pr_auc": 0.03478682749959554
+    },
+    "2018-08": {
+      "orders": 6351,
+      "late_rate": 0.061880018894662256,
+      "xgb_pr_auc": 0.04383546622065123
+    }
+  },
+  "importance_val": {
+    "route_mean_days": 0.07386787691479786,
+    "slack_days": 0.042871777774022846,
+    "distance_km": 0.015085048305166066,
+    "route_late_rate": 0.005641990432807914,
+    "customer_state": 0.004618382748083067,
+    "route_prior_orders": 0.0032015490879911622,
+    "total_freight": 0.002127169509406962,
+    "n_items": 0.00035081088694500774,
+    "category": 0.00026693958211455036,
+    "seller_prior_orders": 0.00016754120997423128
+  }
+}

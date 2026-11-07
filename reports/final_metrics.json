@@ -1,0 +1,59 @@
+{
+  "note": "Second look at the test period, not a blind test.",
+  "orders": 18603,
+  "late_orders": 672,
+  "late_rate": 0.03612320593452669,
+  "train_orders": 71494,
+  "constant_baseline_pr_auc": 0.03612320593452669,
+  "slack_rule": {
+    "pr_auc": 0.12376375667599561,
+    "roc_auc": 0.7741766304564321,
+    "precision_top10pct": 0.13870967741935483,
+    "recall_top10pct": 0.38392857142857145
+  },
+  "logistic_regression": {
+    "pr_auc": 0.07290645647417855,
+    "roc_auc": 0.709473783099766,
+    "precision_top10pct": 0.07795698924731183,
+    "recall_top10pct": 0.21577380952380953,
+    "brier": 0.060202640532363655
+  },
+  "xgboost_core": {
+    "pr_auc": 0.0570478378283474,
+    "roc_auc": 0.6509146918345722,
+    "precision_top10pct": 0.05967741935483871,
+    "recall_top10pct": 0.16517857142857142,
+    "brier": 0.039691879874769825
+  },
+  "constant_baseline_brier": 0.03539200699291935,
+  "ci95_pr_auc_diff": {
+    "xgb_minus_rule": [
+      -0.08479719915328322,
+      -0.05242398967566672
+    ],
+    "xgb_minus_logreg": [
+      -0.0252664886751838,
+      -0.009261040445837908
+    ]
+  },
+  "by_month": {
+    "2018-06": {
+      "orders": 6096,
+      "late_rate": 0.011646981627296589,
+      "xgb_pr_auc": 0.0771776680968258,
+      "rule_pr_auc": 0.03784016382907037
+    },
+    "2018-07": {
+      "orders": 6156,
+      "late_rate": 0.03378817413905133,
+      "xgb_pr_auc": 0.06462429780212513,
+      "rule_pr_auc": 0.0841163044287526
+    },
+    "2018-08": {
+      "orders": 6351,
+      "late_rate": 0.061880018894662256,
+      "xgb_pr_auc": 0.0638594723804151,
+      "rule_pr_auc": 0.15337168965573594
+    }
+  }
+}
